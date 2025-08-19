@@ -4,7 +4,7 @@ class Product {
   final int price;
   final String location;
   final String timeAgo;
-  final int viewCount;
+  final int chats;
   final int likeCount;
   final String description;
   final String sellerName;
@@ -18,7 +18,7 @@ class Product {
     required this.price,
     required this.location,
     required this.timeAgo,
-    required this.viewCount,
+    required this.chats,
     required this.likeCount,
     required this.description,
     required this.sellerName,
@@ -33,7 +33,7 @@ class Product {
     int? price,
     String? location,
     String? timeAgo,
-    int? viewCount,
+    int? chats,
     int? likeCount,
     String? description,
     String? sellerName,
@@ -47,7 +47,7 @@ class Product {
       price: price ?? this.price,
       location: location ?? this.location,
       timeAgo: timeAgo ?? this.timeAgo,
-      viewCount: viewCount ?? this.viewCount,
+      chats: chats ?? this.chats,
       likeCount: likeCount ?? this.likeCount,
       description: description ?? this.description,
       sellerName: sellerName ?? this.sellerName,
