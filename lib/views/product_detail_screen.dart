@@ -101,10 +101,23 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                         width: double.infinity,
                         height: 300,
                         color: Colors.grey[200],
-                        child: const Icon(
-                          Icons.image,
-                          color: Colors.grey,
-                          size: 80,
+                        child: Image.asset(
+                          widget.product.imagePath,
+                          width: double.infinity,
+                          height: 300,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              width: double.infinity,
+                              height: 300,
+                              color: Colors.grey[200],
+                              child: const Icon(
+                                Icons.image,
+                                color: Colors.grey,
+                                size: 80,
+                              ),
+                            );
+                          },
                         ),
                       ),
 
@@ -193,7 +206,7 @@ class _ProductDetailScreenState extends ConsumerState<ProductDetailScreen> {
                             Row(
                               children: [
                                 Icon(
-                                  Icons.remove_red_eye_outlined,
+                                  Icons.chat_bubble_outline,
                                   size: 16,
                                   color: Colors.grey[600],
                                 ),
